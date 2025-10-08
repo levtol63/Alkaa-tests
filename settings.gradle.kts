@@ -26,7 +26,7 @@ include(":libraries:permission")
 include(":domain")
 include(":shared")
 include(":resources")
-
+include(":unittests")
 include(":features:home")
 
 pluginManagement {
@@ -40,3 +40,5 @@ pluginManagement {
 }
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+include(":unittests")
+include(":appium-tests")

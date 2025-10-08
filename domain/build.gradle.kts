@@ -6,7 +6,6 @@ plugins {
 
 kotlin {
     setFrameworkBaseName("domain")
-
     sourceSets {
         commonMain.dependencies {
             implementation(libs.koin.core)
@@ -20,6 +19,7 @@ kotlin {
             implementation(libs.kotlinx.coroutines.test)
         }
     }
+
 }
 
 android {
