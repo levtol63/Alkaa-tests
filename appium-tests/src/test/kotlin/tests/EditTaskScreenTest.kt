@@ -14,7 +14,7 @@ import screens.ListTasksScreen
 import utils.WaitUtils
 import kotlin.collections.mapOf
 import kotlin.test.assertEquals
-//Проект
+//Проект.
 @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
 @Epic("Alkaa App Tests")
 @Feature("Экран редактирования задания")

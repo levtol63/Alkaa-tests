@@ -2,7 +2,7 @@ package screens
 
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
-//Проект
+//Проект.
 object EditTaskScreen {
     val BACK_BT: By = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[1]/android.widget.Button")
     val INPUT_FIELD_NAME_TASK: By = AppiumBy.xpath("//android.widget.EditText[@text=\"New Task\"]")

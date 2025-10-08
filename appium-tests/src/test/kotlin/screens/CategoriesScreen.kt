@@ -2,7 +2,7 @@ package screens
 
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
-//Проект
+//Проект.
 object CategoriesScreen {
     val TITLE_SCREEN: By = AppiumBy.xpath("(//android.widget.TextView[@text=\"Categories\"])[1]")
     val ITEM_PERSONAL: By = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View/android.view.View[1]")

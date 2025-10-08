@@ -2,7 +2,7 @@ package screens
 
 import io.appium.java_client.AppiumBy
 import org.openqa.selenium.By
-//Проект
+//Проект.
 object ListTasksScreen {
     val TITLE_TASK: By = AppiumBy.xpath("(//android.widget.TextView[@text=\"Tasks\"])[1]")
     val SORT_PERS: By = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.CheckBox")

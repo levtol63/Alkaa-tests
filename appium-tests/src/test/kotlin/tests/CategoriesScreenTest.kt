@@ -16,7 +16,7 @@ import screens.CategoriesScreen
 import utils.WaitUtils
 import kotlin.test.assertEquals
 
-//Проект
+//Проект.
 @TestMethodOrder(MethodOrderer.OrderAnnotation::class)
 @Epic("Alkaa App Tests")
 @Feature("Экран категорий заданий")

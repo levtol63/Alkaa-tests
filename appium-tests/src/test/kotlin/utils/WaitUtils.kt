@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.openqa.selenium.support.ui.WebDriverWait
 import java.time.Duration
-//Проект
+//Проект.
 object WaitUtils {
 
     private const val DEFAULT_TIMEOUT = 10L

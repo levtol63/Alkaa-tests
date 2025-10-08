@@ -5,7 +5,7 @@ import io.appium.java_client.android.options.UiAutomator2Options
 import org.junit.jupiter.api.*
 import java.net.URL
 import java.time.Duration
-//Проект
+//Проект.
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 open class BaseTest {
 
