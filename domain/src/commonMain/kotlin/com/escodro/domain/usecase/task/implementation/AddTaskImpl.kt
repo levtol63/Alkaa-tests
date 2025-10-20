@@ -7,7 +7,7 @@ import com.escodro.domain.usecase.alarm.UpdateAlarm
 import com.escodro.domain.usecase.task.AddTask
 import mu.KotlinLogging
 
-internal class AddTaskImpl(
+class AddTaskImpl(
     private val taskRepository: TaskRepository,
     private val updateAlarm: UpdateAlarm,
     private val glanceInteractor: GlanceInteractor?,

@@ -5,9 +5,26 @@ import com.escodro.domain.usecase.alarm.UpdateAlarm
 
 internal class UpdateAlarmFake : UpdateAlarm {
 
-    private val updatedMap = HashMap<Long, Task>()
+    // --- поля для проверок в тестах ---
+    var wasInvoked: Boolean = false
+        private set
+
+    var lastTask: Task? = null
+        private set
+
+    private val updatedById = LinkedHashMap<Long, Task>()
 
     override suspend fun invoke(task: Task) {
-        updatedMap[task.id] = task
+        wasInvoked = true
+        lastTask = task
+        updatedById[task.id] = task
+    }
+
+    fun wasInvokedForId(id: Long): Boolean = updatedById.containsKey(id)
+
+    fun clear() {
+        wasInvoked = false
+        lastTask = null
+        updatedById.clear()
     }
 }
