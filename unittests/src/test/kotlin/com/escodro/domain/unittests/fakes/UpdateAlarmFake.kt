@@ -2,7 +2,7 @@ package com.escodro.domain.unittests.fakes
 
 import com.escodro.domain.model.Task
 import com.escodro.domain.usecase.alarm.UpdateAlarm
-//Проект
+
 class UpdateAlarmFake : UpdateAlarm {
 
     var wasInvoked: Boolean = false

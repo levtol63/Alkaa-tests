@@ -2,7 +2,7 @@ package com.escodro.domain.unittests.fakes
 
 import com.escodro.domain.model.Task
 import com.escodro.domain.repository.TaskRepository
-//Проект
+
 internal class TaskRepositoryFake : TaskRepository {
 
     private val taskMap: MutableMap<Long, Task> = mutableMapOf()

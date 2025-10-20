@@ -42,3 +42,4 @@ pluginManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":unittests")
 include(":appium-tests")
+include(":alkaa-kaspresso-tests")

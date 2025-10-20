@@ -11,7 +11,6 @@ import org.koin.core.module.dsl.factoryOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-//Проект
 val testModule = module {
 
     single { TaskRepositoryFake() } bind TaskRepository::class

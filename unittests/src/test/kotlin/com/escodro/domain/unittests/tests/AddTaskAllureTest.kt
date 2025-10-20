@@ -23,7 +23,7 @@ import kotlin.test.assertFalse
 import kotlin.test.assertNotNull
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
-//Проект
+
 inline fun stepSuspend(name: String, crossinline block: suspend () -> Unit) {
     Allure.step(name, Allure.ThrowableRunnable<Unit> {
         runBlocking { block() }
@@ -84,7 +84,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Добавление задачи с пустым заголовком")
-    fun emptyTitle_doesNothing() = runTest {
+    fun emptyTitleDoesNothing() = runTest {
         val use = newUse()
 
         stepSuspend("Добавление задачи с пустым заголовком") { use(task(title = "")) }
@@ -97,7 +97,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Добавление задачи без срока выполнения")
-    fun noDue_inserts_updatesGlance_noAlarm() = runTest {
+    fun noDueInsertsUpdatesGlanceNoAlarm() = runTest {
         val use = newUse()
 
         stepSuspend("Добавление задачи без срока выполнения") {
@@ -112,7 +112,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Добавление задачи со сроком выполнения")
-    fun withDue_inserts_and_callsUpdateAlarm() = runTest {
+    fun withDueInsertsAndCallsUpdateAlarm() = runTest {
         val use = newUse()
         val due = LocalDateTime(2025, 1, 1, 9, 0)
         val id = 77L
@@ -134,7 +134,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Поиск задач по id")
-    fun lookup_usesIdFromInsert() = runTest {
+    fun lookupUsesIdFromInsert() = runTest {
         val use = newUse()
 
         stepSuspend("Добавление две задачи") {
@@ -149,7 +149,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Glance может быть null")
-    fun nullGlance_doesNotCrash_andInserts() = runTest {
+    fun nullGlanceDoesNotCrashAndInserts() = runTest {
         val use = newUse(glanceOverride = null)
 
         stepSuspend("Добавление задачи при glance=null") {
@@ -163,7 +163,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Добавление нескольких задач подряд")
-    fun multipleTasks_allInserted() = runTest {
+    fun multipleTasksAllInserted() = runTest {
         val use = newUse()
 
         stepSuspend("Добавление три задачи подряд") {
@@ -178,7 +178,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Задача по умолчанию имеет completed=false")
-    fun defaultCompleted_isFalse() = runTest {
+    fun defaultCompletedIsFalse() = runTest {
         val use = newUse()
 
         stepSuspend("Добавление задачи без поля completed") {
@@ -192,7 +192,7 @@ class AddTaskAllureKoinTest : KoinTest {
 
     @Test
     @Story("Сохранение description/category/completed")
-    fun insert_preservesDescriptionCategoryAndCompleted() = runTest {
+    fun insertPreservesDescriptionCategoryAndCompleted() = runTest {
         val use = newUse()
 
         val id = 30L
